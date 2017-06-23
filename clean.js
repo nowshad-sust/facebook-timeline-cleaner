@@ -12,12 +12,16 @@ function watchPageForChange(){
 			mutation.addedNodes.forEach(function(element) {
 				var posts = element.getElementsByClassName(POST_CLASS);
 				if(posts.length == 2){
+					let border = element.closest('._4ikz');
 					element.remove();
+					border.remove();
 					console.log("indirect");
 				}else if(posts.length == 1){
 					if(isSponsored(posts[0])){
 						console.log("sponsored");
+						let border = element.closest('._4ikz');
 						element.remove();
+						border.remove();
 					}
 				}
 			}, this);
@@ -31,14 +35,14 @@ function watchPageForChange(){
 }
 
 function isIndirect(post){
-	if(post.querySelector('._5pcr')){
+	if(post.querySelector('.fbUserContent._5pcr')){
 		return true;
 	}
 	return false;
 }
 
 function isSponsored(post){
-	if(post.querySelector('._4dcu')){
+	if(post.querySelector('._5paw._4dcu') || post.querySelector(".fbUserContent._5pa-")){
 		return true;
 	}
 	return false;
@@ -48,10 +52,14 @@ function clean(posts){
 	for(let post of posts){
 		if(isIndirect(post)){
 			console.log('indirect');
+			let border = post.closest('._4ikz');
 			post.remove();
+			border.remove();
 		}else if(isSponsored(post)){
 			console.log('sponsored');
+			let border = post.closest('._4ikz');
 			post.remove();
+			border.remove();
 		}
 	}
 }
