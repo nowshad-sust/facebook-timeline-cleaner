@@ -20,10 +20,12 @@ function watchPageForChange(){
 				
 				var posts = element.getElementsByClassName(POST_CLASS);
 				if(posts.length == 2){
-					let border = element.closest('._4ikz');
-					element.remove();
-					border.remove();
-					console.log(++count);
+					if(isSponsored(posts[1])){
+						let border = element.closest('._4ikz');
+						element.remove();
+						border.remove();
+						console.log(++count);
+					}
 				}else if(posts.length == 1){
 					if(isSponsored(posts[0])){
 						let border = element.closest('._4ikz');
@@ -42,13 +44,6 @@ function watchPageForChange(){
 	});
 }
 
-function isIndirect(post){
-	if(post.querySelector('.fbUserContent._5pcr')){
-		return true;
-	}
-	return false;
-}
-
 function isSponsored(post){
 	if(post.querySelector('._5paw._4dcu') || post.querySelector(".fbUserContent._5pa-")){
 		return true;
@@ -60,11 +55,6 @@ function clean(posts){
 	for(let post of posts){
 
 		if(isSponsored(post)){
-			let border = post.closest('._4ikz');
-			post.remove();
-			border.remove();
-			console.log(++count);
-		} else if(isIndirect(post)){
 			let border = post.closest('._4ikz');
 			post.remove();
 			border.remove();

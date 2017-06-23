@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+
+  "name": "Timeline Cleaner",
+  "description": "This will filter unwanted posts from your facebook timeline like - sponsored posts and others",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_icon": "icon.png",
+   "default_popup": "index.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.facebook.com/*"],
+      "js": ["clean.js"]
+    }
+  ],
+  
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "https://www.facebook.com/*"
+   ]
+}
