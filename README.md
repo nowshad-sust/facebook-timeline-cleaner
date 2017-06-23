@@ -1,10 +1,24 @@
 # facebook-timeline-cleaner
-a chrome extension to remove sponsored and indirect posts from your timeline
+A chrome extension to remove sponsored and indirect posts from your timeline
 
 ## Platform
 Google Chrome Browser
 
 ## Instructions
+
+### Only Sponsored Posts Filter
+#### Unpacked Only
+* download the folder/repository
+* extract/unzip the downloded folder
+* go to `chrome://extensions/` on your Google Chrome browser
+* tick the `developer mode`
+* now click on `load unpacked extension`
+* now browse and select the `unpacked-only-sponsored` folder from the unzipped folder 
+* congratulations! you just installed the extension successfully
+
+
+### Full Filtering
+#### includes sponsored and all indirect posts (likes, commented, reacted, tagged, etc)
 
 ### Process - 1 (Packed)
 
