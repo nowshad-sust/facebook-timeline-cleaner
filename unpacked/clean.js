@@ -13,12 +13,9 @@ function watchPageForChange(){
 			mutation.addedNodes.forEach(function(element) {
 
 				//clean again for some inconsistency due to data loading
-				if(count < 3){
+				if(count < 5){
 					var initialPosts = document.getElementsByClassName(POST_CLASS);
-					if(initialPosts.legth > 1){
-						if(isSponsored(posts[1])){
-							posts[2].remove();
-					}
+					clean(initialPosts);
 				}
 				
 				var posts = element.getElementsByClassName(POST_CLASS);
