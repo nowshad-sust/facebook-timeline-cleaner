@@ -15,7 +15,10 @@ function watchPageForChange(){
 				//clean again for some inconsistency due to data loading
 				if(count < 3){
 					var initialPosts = document.getElementsByClassName(POST_CLASS);
-					clean(initialPosts);
+					if(initialPosts.legth > 1){
+						if(isSponsored(posts[1])){
+							posts[2].remove();
+					}
 				}
 				
 				var posts = element.getElementsByClassName(POST_CLASS);
