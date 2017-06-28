@@ -7,7 +7,15 @@ Google Chrome Browser
 ## Instructions
 
 ### Only Sponsored Posts Filter
-#### Unpacked Only
+
+### Process - 1 (Packed)
+
+* download the `unpacked-only-sponsored.crx` file
+* now drag and drop the file on your chrome browser and forward
+* congratulations! you've installed the extesnion successfully
+
+### Process - 2 (Unpacked)
+
 * download the folder/repository
 * extract/unzip the downloded folder
 * go to `chrome://extensions/` on your Google Chrome browser
@@ -16,13 +24,12 @@ Google Chrome Browser
 * now browse and select the `unpacked-only-sponsored` folder from the unzipped folder 
 * congratulations! you just installed the extension successfully
 
-
 ### Full Filtering
 #### includes sponsored and all indirect posts (likes, commented, reacted, tagged, etc)
 
 ### Process - 1 (Packed)
 
-* download the `TimelineCleaner.crx` file
+* download the `unpacked.crx` file
 * now drag and drop the file on your chrome browser and forward
 * congratulations! you've installed the extesnion successfully
 
